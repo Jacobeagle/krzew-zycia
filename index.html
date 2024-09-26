@@ -1,183 +1,244 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <link rel="icon" href="logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uczniowie Jezusa</title>
-    <meta name="description" content="Strona poświęcona grupie ludzi zainteresowanych katolicyzmem. Dołącz do nas na Discordzie, aby dzielić się przemyśleniami i doświadczeniami związanymi z wiarą katolicką.">
-    <meta name="keywords" content="katolicyzm, grupa, wiara, społeczność, Discord, Uczniowie Jezusa, gaming, wspólnota, modlitwa, rozmowy, religia, wartości, edukacja, wydarzenia, duchowość, chrześcijaństwo, integracja, wsparcie, doświadczenie, prelekcje, warsztaty, przyjaźń, spotkania, hobbystyczne, zainteresowania, rozwój osobisty, katolickie, nauki, Biblia, dialog, porady, pytania, inspiracje, odpowiedzi, mentoring, wspólne gry">
-    <meta name="author" content="Uczniowie Jezusa">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="pl">
-    <meta name="rating" content="General">
-    <meta name="theme-color" content="#FF6347"> <!-- Kolor pomidora -->
-    <meta property="og:title" content="Uczniowie Jezusa">
-    <meta property="og:description" content="Strona poświęcona grupie ludzi zainteresowanych katolicyzmem.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://twojastrona.pl">
-    <meta property="og:image" content="logo.png">
-    <meta property="og:site_name" content="Uczniowie Jezusa">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Uczniowie Jezusa">
-    <meta name="twitter:description" content="Dołącz do naszej grupy i wspólnie eksploruj tematykę katolicką.">
-    <meta name="twitter:image" content="logo.png">
-    <meta name="twitter:site" content="@UczniowieJezusa">
-    <meta name="twitter:creator" content="@UczniowieJezusa">
+    <meta name="description" content="Grupa katolicka, która organizuje spotkania, gamingowe wieczory i wspiera duchowy rozwój. Dołącz do nas na Discordzie i YouTube.">
+    <meta name="keywords" content="katolicyzm, chrześcijaństwo, duchowość, modlitwa, gaming, Discord, YouTube, wspólnota">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9; /* Jasne tło */
-            color: #333;
+        * {
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
+            box-sizing: border-box;
         }
-        header {
-            background-color: #FF6347; /* Kolor pomidora */
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #ffffff;
+            background: linear-gradient(135deg, #2e3440, #4c566a);
+            overflow-x: hidden;
+        }
+
+        /* Animowane tło */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(46, 52, 64, 0.8), rgba(76, 86, 106, 0.8));
+            z-index: -1;
+            filter: blur(10px);
+            animation: gradientBackground 10s ease infinite;
+        }
+
+        @keyframes gradientBackground {
+            0% {background-position: 0 0;}
+            50% {background-position: 100% 100%;}
+            100% {background-position: 0 0;}
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            position: relative;
-            animation: fadeIn 1s; /* Animacja wejścia */
+            background: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: background 0.5s, transform 0.5s ease;
+            animation: slideDown 1s ease-in-out;
         }
-        img.logo {
-            width: 200px;
-            height: auto;
+
+        header img {
+            width: 120px;
+            transition: transform 0.5s ease;
         }
-        nav {
-            margin: 15px 0;
+
+        header img:hover {
+            transform: rotate(360deg);
         }
+
         nav a {
-            color: white;
-            margin: 0 15px;
+            margin-left: 20px;
+            color: #FFFFFF;
             text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s, transform 0.3s; /* Przejrzystość i transformacja */
+            font-size: 18px;
+            transition: color 0.3s ease, transform 0.5s ease;
         }
+
         nav a:hover {
-            color: #FFD700; /* Złoty kolor przy najechaniu */
-            transform: scale(1.1); /* Powiększenie przy najechaniu */
+            color: #FFD700;
+            transform: scale(1.1);
         }
+
+        header.scrolled {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        section {
+            text-align: center;
+            padding: 100px 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        h1, h2 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+        }
+
         h1 {
-            color: #FF4500; /* Ciemniejszy kolor pomidora */
-            margin-top: 20px;
-            animation: slideIn 1s; /* Animacja wejścia */
+            font-size: 3em;
+            color: #FFD700;
+            animation-delay: 0.2s;
         }
+
         h2 {
-            color: #4B0082; /* Indygo */
-            animation: fadeIn 1s;
+            font-size: 2em;
+            color: #FFFFFF;
+            animation-delay: 0.4s;
         }
-        h4 {
-            color: #666;
-            max-width: 600px;
-            margin: 20px;
-        }
+
         p {
-            max-width: 600px;
-            text-align: justify;
-            margin: 10px 20px;
-            color: #444;
-            animation: fadeIn 1s; /* Animacja wejścia */
+            max-width: 800px;
+            margin: 0 auto;
+            color: #eaeaea;
+            font-size: 1.1em;
+            line-height: 1.6;
+            opacity: 0;
+            animation: fadeIn 2s ease forwards;
+            animation-delay: 0.6s;
         }
+
+        /* Animacje fade-in i fade-in-up */
+        @keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+
+        @keyframes fadeInUp {
+            0% {opacity: 0; transform: translateY(30px);}
+            100% {opacity: 1; transform: translateY(0);}
+        }
+
+        @keyframes slideDown {
+            0% {transform: translateY(-100%);}
+            100% {transform: translateY(0);}
+        }
+
         .button {
             display: inline-flex;
             align-items: center;
-            background-color: #32CD32; /* Zielony przycisk */
-            color: white;
-            padding: 10px 20px;
+            padding: 15px 30px;
+            margin: 30px;
+            background: #FFD700;
+            color: #000000;
+            font-size: 1.2em;
             border: none;
-            border-radius: 5px;
-            font-size: 16px;
+            border-radius: 50px;
             cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s; /* Przejrzystość i transformacja */
-            margin: 10px;
             text-decoration: none;
+            transition: transform 0.3s, background-color 0.3s, box-shadow 0.5s ease;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            animation: pulse 2s infinite;
         }
+
         .button:hover {
-            background-color: #228B22; /* Ciemniejszy odcień zielonego przy najechaniu */
-            transform: scale(1.05); /* Powiększenie przy najechaniu */
+            transform: translateY(-5px) scale(1.1);
+            background-color: #FFA500;
+            box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.4);
         }
+
         .button img {
-            width: 20px;
-            margin-right: 8px;
+            margin-right: 15px;
+            width: 24px;
         }
+
+        @keyframes pulse {
+            0% {transform: scale(1);}
+            50% {transform: scale(1.05);}
+            100% {transform: scale(1);}
+        }
+
         footer {
-            margin-top: auto;
+            background: #2e3440;
+            color: #FFFFFF;
             padding: 20px;
             text-align: center;
-            background-color: #FF6347; /* Kolor pomidora */
-            color: white;
-            width: 100%;
+            font-size: 0.9em;
+            animation: fadeIn 2s ease;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+
+        /* Animacja smooth scroll */
+        html {
+            scroll-behavior: smooth;
         }
-        @keyframes slideIn {
-            from { transform: translateY(-20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
+
     </style>
+
     <script>
-        function otworzLink(url) {
-            window.open(url, "_blank"); // Otwiera link w nowej karcie
-        }
+        window.onscroll = function() {
+            const header = document.querySelector('header');
+            if (window.pageYOffset > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        };
     </script>
 </head>
+
 <body>
     <header>
-        <img src="logo.png" alt="Logo Mojej Strony" class="logo">
+        <img src="logo.png" alt="Logo strony">
         <nav>
             <a href="#about">O nas</a>
-            <a href="#mission">Nasza Misja</a>
-            <a href="#community">Grupa</a>
+            <a href="#mission">Misja</a>
             <a href="#events">Wydarzenia</a>
             <a href="#contact">Kontakt</a>
         </nav>
     </header>
 
-    <h1>Witamy na naszej stronie!</h1>
-    <h2>Strona poświęcona jest Katolicyźmie</h2>
-    <h4>Zapraszamy na naszego discorda, gdzie ludzie mogą dzielić się swoimi przemyśleniami oraz doświadczeniami związanymi z wiarą katolicką. Każdy, niezależnie od wyznania, jest mile widziany.</h4>
-    
     <section id="about">
+        <h1>Witamy na stronie Uczniów Jezusa!</h1>
         <h2>O nas</h2>
-        <p>Jesteśmy grupą ludzi, którzy pragną wspólnie eksplorować tematykę katolicką i dzielić się swoimi spostrzeżeniami. Nasze spotkania mają na celu tworzenie przestrzeni do otwartych dyskusji, wsparcia oraz wzajemnej inspiracji. Regularnie organizujemy spotkania, które sprzyjają duchowemu rozwojowi oraz nawiązywaniu nowych przyjaźni.</p>
+        <p>Jesteśmy grupą wierzących, którzy pragną wspólnie rozwijać swoją wiarę, dzielić się przemyśleniami i pogłębiać swoje życie duchowe w ramach katolicyzmu.</p>
     </section>
 
     <section id="mission">
         <h2>Nasza Misja</h2>
-        <p>Naszym celem jest propagowanie wartości katolickich w społeczeństwie oraz zachęcanie do dialogu na temat wiary i duchowości. Dążymy do stworzenia otwartej i przyjaznej atmosfery, w której każdy będzie mógł się wypowiedzieć i być wysłuchanym.</p>
-    </section>
-
-    <section id="community">
-        <h2>Grupa</h2>
-        <p>W naszej grupie organizujemy nie tylko spotkania związane z wiarą, ale także gamingowe wieczory oraz inne wydarzenia integracyjne. Chcemy, aby każdy mógł poczuć się częścią naszej wspólnoty.</p>
+        <p>Naszą misją jest budowanie wspólnoty opartej na miłości i wsparciu. Chcemy pomagać sobie nawzajem w rozwijaniu duchowego życia, inspirować się wiarą i działać na rzecz innych.</p>
     </section>
 
     <section id="events">
         <h2>Wydarzenia</h2>
-        <p>Planujemy organizować różnorodne wydarzenia, w tym gamingowe wieczory, warsztaty i spotkania modlitewne. To doskonała okazja, aby poznać innych ludzi o podobnych zainteresowaniach i wspólnie spędzać czas.</p>
+        <p>W ramach naszej grupy organizujemy regularne wydarzenia, takie jak spotkania modlitewne oraz wieczory gamingowe, które łączą rozrywkę z duchowością.</p>
     </section>
 
     <section id="contact">
         <h2>Kontakt</h2>
-        <p>Jeśli chcesz dowiedzieć się więcej, skontaktuj się z nami przez nasz kanał Discord lub śledź nas na YouTube!</p>
+        <p>Dołącz do nas na Discordzie lub śledź nasze filmy na YouTube, aby być na bieżąco z naszymi wydarzeniami i inicjatywami.</p>
+        <a href="https://discord.gg/6CzB9uKZC3" class="button">
+            <img src="https://seeklogo.com/images/D/discord-black-logo-733DD6B9B0-seeklogo.com.png" alt="Discord Logo"> Serwer Discord
+        </a>
+        <a href="https://www.youtube.com/@UczniowieJezusa" class="button">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube Logo"> Nasz YouTube
+        </a>
     </section>
 
-    <a href="https://discord.gg/6CzB9uKZC3" class="button">
-        <img src="https://seeklogo.com/images/D/discord-black-logo-733DD6B9B0-seeklogo.com.png" alt="Logo Discorda"> Serwer Discord
-    </a>
-    <a href="https://www.youtube.com/@UczniowieJezusa" class="button">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="Logo YouTube"> Nasz YouTube
-    </a>
-
     <footer>
-        <p>&copy; 2024 Uczniowie Jezusa.</p>
+        &copy; 2024 Uczniowie Jezusa.
     </footer>
 </body>
 </html>
