@@ -11,7 +11,7 @@
     <meta name="robots" content="index, follow">
     <meta name="language" content="pl">
     <meta name="rating" content="General">
-    <meta name="theme-color" content="#4CAF50">
+    <meta name="theme-color" content="#FF6347"> <!-- Kolor pomidora -->
     <meta property="og:title" content="Uczniowie Jezusa">
     <meta property="og:description" content="Strona poświęcona grupie ludzi zainteresowanych katolicyzmem.">
     <meta property="og:type" content="website">
@@ -24,106 +24,102 @@
     <meta name="twitter:image" content="logo.png">
     <meta name="twitter:site" content="@UczniowieJezusa">
     <meta name="twitter:creator" content="@UczniowieJezusa">
-    <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE">
-    <meta name="googlebot" content="index, follow">
-    <meta name="viewport-fit" content="cover">
-    <meta property="article:published_time" content="2024-01-01T12:00:00Z">
-    <meta property="article:modified_time" content="2024-01-01T12:00:00Z">
-    <meta property="article:author" content="Uczniowie Jezusa">
-    <meta property="article:section" content="Wspólnota Katolicka">
-    <meta property="article:tag" content="katolicyzm">
-    <meta property="article:tag" content="gaming">
-    <meta property="article:tag" content="duchowość">
-    <meta property="article:tag" content="wspólnota">
-    <meta name="msapplication-TileColor" content="#4CAF50">
-    <meta name="msapplication-config" content="/browserconfig.xml">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="Uczniowie Jezusa">
-    <meta name="publisher" content="Uczniowie Jezusa">
-    <meta name="facebook-domain-verification" content="YOUR_VERIFICATION_CODE_HERE">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff; /* Jasnoniebieskie tło */
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9; /* Jasne tło */
             color: #333;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
-            text-align: center; /* Wyśrodkowanie tekstu */
+            text-align: center;
         }
         header {
-            background-color: #2E8B57; /* Ciemnozielone tło nagłówka */
+            background-color: #FF6347; /* Kolor pomidora */
             width: 100%;
             padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             position: relative;
+            animation: fadeIn 1s; /* Animacja wejścia */
         }
         img.logo {
             width: 200px;
             height: auto;
         }
         nav {
-            margin: 15px 0; /* Margines górny i dolny dla menu */
+            margin: 15px 0;
         }
         nav a {
             color: white;
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
-            transition: color 0.3s; /* Przejrzystość */
+            transition: color 0.3s, transform 0.3s; /* Przejrzystość i transformacja */
         }
         nav a:hover {
             color: #FFD700; /* Złoty kolor przy najechaniu */
+            transform: scale(1.1); /* Powiększenie przy najechaniu */
         }
         h1 {
-            color: #2E8B57; /* Zielony kolor nagłówka */
+            color: #FF4500; /* Ciemniejszy kolor pomidora */
             margin-top: 20px;
+            animation: slideIn 1s; /* Animacja wejścia */
         }
         h2 {
             color: #4B0082; /* Indygo */
+            animation: fadeIn 1s;
         }
         h4 {
             color: #666;
-            max-width: 600px; /* Maksymalna szerokość dla h4 */
+            max-width: 600px;
             margin: 20px;
         }
         p {
             max-width: 600px;
-            text-align: justify; /* Uporządkowanie tekstu */
-            margin: 10px 20px; /* Marginesy dla paragrafów */
+            text-align: justify;
+            margin: 10px 20px;
             color: #444;
+            animation: fadeIn 1s; /* Animacja wejścia */
         }
         .button {
             display: inline-flex;
-            align-items: center; /* Wyśrodkowanie ikony i tekstu */
-            background-color: #2E8B57; /* Zielony przycisk */
+            align-items: center;
+            background-color: #32CD32; /* Zielony przycisk */
             color: white;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
-            transition: background-color 0.3s;
-            margin: 10px; /* Marginesy dla przycisków */
-            text-decoration: none; /* Usunięcie podkreślenia */
+            transition: background-color 0.3s, transform 0.3s; /* Przejrzystość i transformacja */
+            margin: 10px;
+            text-decoration: none;
         }
         .button:hover {
             background-color: #228B22; /* Ciemniejszy odcień zielonego przy najechaniu */
+            transform: scale(1.05); /* Powiększenie przy najechaniu */
         }
         .button img {
-            width: 20px; /* Rozmiar ikony Discord */
-            margin-right: 8px; /* Odstęp między ikoną a tekstem */
+            width: 20px;
+            margin-right: 8px;
         }
         footer {
-            margin-top: auto; /* Wyrównanie do dołu */
+            margin-top: auto;
             padding: 20px;
             text-align: center;
-            background-color: #2E8B57; /* Zielone tło stopki */
+            background-color: #FF6347; /* Kolor pomidora */
             color: white;
             width: 100%;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
     </style>
     <script>
@@ -173,10 +169,10 @@
         <p>Jeśli chcesz dowiedzieć się więcej, skontaktuj się z nami przez nasz kanał Discord lub śledź nas na YouTube!</p>
     </section>
 
-    <a href="https://discord.gg/6CzB9uKZC3" class="button" onclick="otworzLink('https://discord.gg/6CzB9uKZC3');">
-        <img src="https://seeklogo.com/images/D/discord-logo-134E148657-seeklogo.com.png" alt="Logo Discorda"> Serwer Discord
+    <a href="https://discord.gg/6CzB9uKZC3" class="button">
+        <img src="https://upload.wikimedia.org/wikipedia/en/5/51/Discord_logo_logo.svg" alt="Logo Discorda"> Serwer Discord
     </a>
-    <a href="https://www.youtube.com/@UczniowieJezusa" class="button" onclick="otworzLink('https://www.youtube.com/@UczniowieJezusa');">
+    <a href="https://www.youtube.com/@UczniowieJezusa" class="button">
         <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="Logo YouTube"> Nasz YouTube
     </a>
 
