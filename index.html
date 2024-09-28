@@ -83,30 +83,30 @@
             50% {background-position: 100% 100%;}
             100% {background-position: 0 0;}
         }
-         /* Stylowanie paska tłumaczenia */
-        #google_translate_element {
-            margin: 10px;
-            padding: 10px;
-            background-color: rgba(255, 215, 0, 0.8);
-            border-radius: 5px;
-            display: inline-block;
-        }
+         /* Stylowanie paska tłumaczenia Google */
+#google_translate_element {
+    position: relative; /* Ustawienie pozycji względnej */
+    z-index: 999; /* Z-index poniżej nagłówka */
+    margin-top: 60px; /* Przesunięcie w dół */
+}
 
-        #google_translate_element select {
-            background-color: #FFD700;
-            color: #000;
-            border: none;
-            border-radius: 5px;
-            padding: 10px;
-            font-size: 1em;
-            cursor: pointer;
-            transition: transform 0.3s, background-color 0.3s;
-        }
+/* Styl dla selektora języka */
+#google_translate_element select {
+    background-color: #FFD700;
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
 
-        #google_translate_element select:hover {
-            transform: translateY(-2px);
-            background-color: #FFA500;
-        }
+#google_translate_element select:hover {
+    transform: translateY(-5px) scale(1.1);
+}
 
         header {
             display: flex;
