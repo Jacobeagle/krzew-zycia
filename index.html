@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uczniowie Jezusa</title>
+    <title>Krzew Życia</title>
     <meta name="description" content="Grupa katolicka, która organizuje spotkania, gamingowe wieczory i wspiera duchowy rozwój. Dołącz do nas na Discordzie i YouTube.">
     <meta name="keywords" content="katolicyzm, chrześcijaństwo, duchowość, modlitwa, gaming, Discord, YouTube, wspólnota">
     <meta name="google-site-verification" content="68xDz73qFL260nbPtPbmxOH782i5L5ibNY--a7YiqQY" />
@@ -82,6 +82,30 @@
             0% {background-position: 0 0;}
             50% {background-position: 100% 100%;}
             100% {background-position: 0 0;}
+        }
+         /* Stylowanie paska tłumaczenia */
+        #google_translate_element {
+            margin: 10px;
+            padding: 10px;
+            background-color: rgba(255, 215, 0, 0.8);
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        #google_translate_element select {
+            background-color: #FFD700;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        #google_translate_element select:hover {
+            transform: translateY(-2px);
+            background-color: #FFA500;
         }
 
         header {
@@ -247,11 +271,12 @@
             <a href="#mission">Misja</a>
             <a href="#events">Wydarzenia</a>
             <a href="#contact">Kontakt</a>
+            <div id="google_translate_element"></div>
         </nav>
     </header>
 
     <section id="about">
-        <h1>Witamy na stronie Uczniów Jezusa!</h1>
+        <h1>Witamy na stronie Krzewu życia!</h1>
         <h2>O nas</h2>
         <p>Jesteśmy grupą wierzących, którzy pragną wspólnie rozwijać swoją wiarę, dzielić się przemyśleniami i pogłębiać swoje życie duchowe w ramach katolicyzmu.</p>
     </section>
@@ -280,5 +305,17 @@
     <footer>
         &copy; 2024 Uczniowie Jezusa. Wszelkie prawa zastrzeżone. Strona została zahostowana za pomocą GitHub: <a href="https://github.com/Jacobeagle/uczniowieJezusa">Repozytorium </a>
     </footer>
+    <!-- Skrypt Google Translate -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'pl',
+                includedLanguages: 'pl,en,es,de,fr,it,pt,uk,zh,ja,ko,nl,sv,no,da,fi', // Dodano wszystkie języki
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
