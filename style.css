@@ -63,6 +63,7 @@ header {
     background: rgba(0, 0, 0, 0.5);
     position: fixed;
     width: 100%;
+    height: min-content;
     z-index: 1000;
     transition: background 0.5s, transform 0.5s ease;
     animation: slideDown 1s ease-in-out;
