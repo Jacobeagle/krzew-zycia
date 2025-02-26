@@ -14,7 +14,34 @@
 
 <body>
     <header>
+        <button onclick="playSound()" class="logo-button">
             <img src="logo.png" alt="Logo strony">
+          </button>
+          
+          <audio id="hornSound" src="horn.mp3"></audio>
+          
+          <script>
+            function playSound() {
+              const sound = document.getElementById("hornSound");
+              sound.currentTime = 0; // Resetuj, jeśli dźwięk jest już odtwarzany
+              sound.play();
+            }
+          </script>
+          
+          <style>
+            .logo-button {
+              background: none;
+              border: none;
+              padding: 0;
+              cursor: pointer;
+            }
+          
+            .logo-button img {
+              width: 150px; /* Możesz dostosować rozmiar */
+              height: auto;
+            }
+          </style>
+          
             <nav>
 
             <a href="#about">O nas</a>
