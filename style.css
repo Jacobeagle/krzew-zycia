@@ -192,6 +192,44 @@ footer {
     animation: fadeIn 2s ease;
 }
 
+.cage {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 5px solid black;
+    background: gray;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: visible; /* 🔹 To pozwala psu wyjść bez znikania */
+}
+
+
+/* Drzwi */
+.door {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 120px;
+    background: brown;
+    border: 3px solid #5a3d2b;
+    transition: transform 1s ease-out, opacity 1s ease-out; /* 🔹 Animacja ruchu + zanikania */
+}
+
+
+/* Pies */
+.dog {
+    font-size: 50px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 1s ease-in-out;
+}
+
+
 /* Animacja smooth scroll */
 html {
     scroll-behavior: smooth;
